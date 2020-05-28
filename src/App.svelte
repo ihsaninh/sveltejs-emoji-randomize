@@ -1,30 +1,27 @@
 <script>
-	export let name;
+	let currentEmoji = '😃'
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div>
+	<h1>Randomize Emoji</h1>
+	<div>{currentEmoji}</div>
+	<button>🔁 Randomize</button>
+</div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+	button {
+		background-color: #8bd3dd;
+		padding: 0.75em;
+		border-radius: 0.25em;
+		border: 2px solid #000;
+		box-shadow: 0.5rem 0.4rem 0 #222
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	button:hover {
+		box-shadow: 0.25rem 0.25rem 0 #222;
+		transition: all 0.4s ease 0s;
+		background-color: #8bd;
 	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	div {
+		margin: 2em
 	}
 </style>
